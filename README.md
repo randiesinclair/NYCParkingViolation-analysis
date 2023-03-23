@@ -32,8 +32,31 @@ There is link to the Tableau presentation, along with our dataset as Github was 
 
 ![Alt text](Pictures/ML1.JPG)
 
-Demo of Unsupervised Model
+## Demos of Supevised and Unsupervised Machine Learning Models
+Using a python script, we created an “app” that we ran in Anaconda prompt to predict the probability of being ticketed if we have a user input particular features from the dataset.
 
-[label](Pictures/APrompt1.mp4)
+[Demo 1](https://drive.google.com/file/d/1ePsm7ppJL8XNOuayZjefcO2VggUAK2ja/view?usp=share_link)
 
-[label](Pictures/APrompt2.mp4)
+
+We essentially wanted to see if I have a Black Toyota with Jersey plates, and I park on South St… can my model tell me the chances I would could be ticketed?
+
+
+After running the first instance, I noticed something… my cluster accuracy was 100%, which unfortunately is not typically feasible. I believe the particular challenge in this instance is that my data is too simple. In other words selected features formy analysis are not really representative of the whole dataset, which can result in high accuracy but poor generalization to new data.
+
+
+The first attempt at this I did unsupervised machine learning. I realized quickly that my model was claiming 100% which isn’t reasonable. As I thought about the exercise, I realized that every single car in this dataset has been ticketed, so it didn’t make sense to me to run it as a supervised model since it’s trained on everything I would ask it. Not really giving a prediction.
+
+
+[Demo 2 (video)](https://drive.google.com/file/d/1nDhUh2j48OemRTX3ozKdOqgniXmJ1ioF/view?usp=share_link)
+
+![Alt text](Pictures/ML2.JPG)
+
+As you can see we barely get an elbow at 4, and after running a bar plot to show cluster sizes it was uneven. To my understanding, the point of this bar chart is to show if each of the cluster has a similar distribution and mine unfortunately does not.
+
+![Alt text](Pictures/Issues.JPG)
+
+When we initially went to upload the starter files to the repo, we learned that there is a 100MB limit to the data that could be held within a Github repository. We unsuccessfully attempted a program call Git Large File Storage, feeding in the csv’s from AWS S3 buckets and Google Cloud Storage, even zipping the file and uploading it did not work as it only compressed the file but did not change it’s size. We ultimately placed the data in a Google Drive storage folder and linked it in the repository. This is an issue that granted more time we would look to resolve.
+Again with file size, we ran into long compute times whether it was in VS Code, Google Colab, or Databricks. We did use code to take samples of the data, and even attempted to stratify, or make those samples more proportionate. 
+
+
+There is chance that in our attempts to simplify the data for the sake of compute time, we could have simplified the data too much to get accurate testing. In the supervised model it scored 100% accuracy which is likely overfitting. When the unsupervised model was also getting 100%, it came down to the possibility of our dataset being to simplified.
