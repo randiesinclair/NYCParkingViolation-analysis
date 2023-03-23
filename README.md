@@ -30,12 +30,15 @@ There is link to the Tableau presentation, along with our dataset as Github was 
 
 # Machine Learning
 
+## Demos of Supevised and Unsupervised Machine Learning Models
+
+Demo 1 supervised
 ![Alt text](Pictures/ML1.JPG)
 
-## Demos of Supevised and Unsupervised Machine Learning Models
+
 Using a python script, we created an “app” that we ran in Anaconda prompt to predict the probability of being ticketed if we have a user input particular features from the dataset.
 
-[Demo 1](https://drive.google.com/file/d/1ePsm7ppJL8XNOuayZjefcO2VggUAK2ja/view?usp=share_link)
+[Demo 1 unsupervised (video)](https://drive.google.com/file/d/1ePsm7ppJL8XNOuayZjefcO2VggUAK2ja/view?usp=share_link)
 
 
 We essentially wanted to see if I have a Black Toyota with Jersey plates, and I park on South St… can my model tell me the chances I would could be ticketed?
@@ -47,7 +50,7 @@ After running the first instance, I noticed something… my cluster accuracy was
 The first attempt at this I did unsupervised machine learning. I realized quickly that my model was claiming 100% which isn’t reasonable. As I thought about the exercise, I realized that every single car in this dataset has been ticketed, so it didn’t make sense to me to run it as a supervised model since it’s trained on everything I would ask it. Not really giving a prediction.
 
 
-[Demo 2 (video)](https://drive.google.com/file/d/1nDhUh2j48OemRTX3ozKdOqgniXmJ1ioF/view?usp=share_link)
+[Demo 2 unsupervised (video)](https://drive.google.com/file/d/1nDhUh2j48OemRTX3ozKdOqgniXmJ1ioF/view?usp=share_link)
 
 ![Alt text](Pictures/ML2.JPG)
 
